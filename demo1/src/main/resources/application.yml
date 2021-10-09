@@ -1,0 +1,21 @@
+
+spring:
+  datasource:
+#   h2 database setting
+    url: jdbc:h2:mem:test
+    username: sa
+    password: admin
+    driver-class-name: org.h2.Driver
+
+
+  jpa:
+    hibernate:
+#      ddl-auto ?????? 5? ??
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+  h2:
+    console:
+      enabled: true
