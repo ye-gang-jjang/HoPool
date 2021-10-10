@@ -6,6 +6,15 @@ spring:
     username: sa
     password: admin
     driver-class-name: org.h2.Driver
+  session:
+    timeout: 600
+    store-type: jdbc
+    jdbc:
+      initialize-schema: always
+      table-name: SPRING_SESSION
+    jpa:
+      open-in-view: false
+      generate-ddl: true
 
 
   jpa:
@@ -19,3 +28,4 @@ spring:
   h2:
     console:
       enabled: true
+
